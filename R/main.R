@@ -32,17 +32,17 @@ data_positive$sector <- factor(data_positive$sector, c(
 ))
 
 # Define function to compute the deletion residual.
-residual_exclusion <- function(object) {
+residual_exclusion <- function(object, dispersion = 1) {
   # We define the dispersion parameter as 1 because we are only
   # dealing with Poisson and negative binomial models.
-  dispersion <- 1
   deviance_residual <- residuals(object, type = "deviance")
   pearson_residual <- residuals(object, type = "pearson")
   h <- hatvalues(object)
-  std_den <- (sqrt(dispersion * (1 - h)))
+  std_den <- sqrt(dispersion * (1 - h))
   standard_dev <- deviance_residual / std_den
   standard_pear <- pearson_residual / std_den
-  residual_squared <- ((1 - h) * (standard_dev^2)) + (h * (standard_pear^2))
+  residual_squared <-
+    ((1 - h) * (standard_dev^2)) + (h * (standard_pear^2))
   sqrt(residual_squared)
 }
 
