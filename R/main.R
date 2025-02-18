@@ -80,6 +80,20 @@ asympDiag::envelope(fit_negbin,
 )
 dev.off()
 
+# Envelope plot with ML estimate of the shape parameter
+fit_negbin_ml <- glm.nb(
+  cases ~ gender + age + pcr + sector + week + age:vp + offset(log(n)),
+  data = data_positive,
+  maxit = 1000
+)
+
+set.seed(505)
+pdf(file.path(envelope_location, "negbin_ml.pdf"))
+asympDiag::envelope(fit_negbin_ml,
+  nsim = envelope_nsim, residual_fn = residual_exclusion
+)
+dev.off()
+
 # Verify the asymptotic approximation for Wald test.
 if (run_wald_sim) {
   # First we consider that the NB20 model is well defined.
