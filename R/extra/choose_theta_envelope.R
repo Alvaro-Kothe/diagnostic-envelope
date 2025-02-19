@@ -37,7 +37,7 @@ discrepancy_envelope <- function(residual, lower, upper) {
     ifelse(residual > upper, abs(residual - upper), 0.0)
   )
 
-  mean(re^2)
+  sqrt(mean(re^2))
 }
 
 thetas <- c(5, 10, 20, 30, 50, 55.86, 100, 1000)
