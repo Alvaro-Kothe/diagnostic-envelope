@@ -60,3 +60,8 @@ for (i in seq_along(thetas)) {
 }
 
 cbind(thetas, discrepancies)
+# End: Article code
+
+cbind(thetas, discrepancies) |>
+  knitr::kable("latex", booktabs = TRUE, linesep = "") |>
+  cat()
