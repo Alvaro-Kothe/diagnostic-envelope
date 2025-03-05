@@ -15,3 +15,8 @@ This setups the R environment with the necessary packages and create all the fig
 
 If you don't have `make` in your system, you may execute the file [R/main.R](./R/main.R) within Rstudio.
 Read the commented code at the top of the file on how to install the necessary package versions.
+
+## Simulation results
+
+The results from the [envelope discrepancy simulation](/R/extra/ed_vs_mle_theta.R) are available in the
+[GitHub Releases](https://github.com/Alvaro-Kothe/diagnostic-envelope/releases).
