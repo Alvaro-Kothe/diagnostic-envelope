@@ -45,7 +45,7 @@ fit_negbin <- glm(
   family = MASS::negative.binomial(theta = 20, link = "log")
 )
 
-new_responses <- simulate(fit_negbin, nsim = 10000L, seed = 505)
+new_responses <- simulate(fit_negbin, nsim = 10000L, seed = 505)[1:5000]
 
 # This will be used to speed up the model refit
 generator_params <- coef(fit_negbin)
