@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.4.2",
+    "Version": "4.4.3",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -11,7 +11,7 @@
   "Packages": {
     "MASS": {
       "Package": "MASS",
-      "Version": "7.3-61",
+      "Version": "7.3-64",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -22,22 +22,17 @@
         "stats",
         "utils"
       ],
-      "Hash": "0cafd6f0500e5deba33be22c46bf6055"
+      "Hash": "49d2d8090b74c1179df1aff16201caf8"
     },
     "asympDiag": {
       "Package": "asympDiag",
-      "Version": "0.1.0",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteUsername": "Alvaro-Kothe",
-      "RemoteRepo": "asympDiag",
-      "RemoteRef": "main",
-      "RemoteSha": "32958b707e04b1f7ddc3190c7b3487ce1ccf7759",
-      "RemoteHost": "api.github.com",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
       "Requirements": [
         "cli"
       ],
-      "Hash": "34e41aafc0f7e256fc1cc595286120a3"
+      "Hash": "5f7ef26b7b69ee4880ffdf702862d845"
     },
     "cli": {
       "Package": "cli",
